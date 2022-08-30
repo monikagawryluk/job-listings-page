@@ -1,0 +1,197 @@
+:root {
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --light-grayish-cyan--backgroung: hsl(180, 52%, 96%);
+  --light-grayish-cyan--tablets: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --dark-grayish-cyan--light: hsla(180, 8%, 52%, 0.4);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+  --item-border: 1.2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  /* max-width: 144rem; */
+}
+
+.header {
+  background-color: var(--desaturated-dark-cyan);
+  height: 15.6rem; /*temporary */
+}
+
+.main {
+  background-color: var(--light-grayish-cyan--backgroung);
+  margin: 0 auto;
+}
+
+.container {
+  padding: 5rem 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.job-item {
+  max-width: 43rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+  border-radius: var(--item-border);
+  position: relative;
+}
+
+.job-item::before {
+  content: '';
+  background-color: var(--desaturated-dark-cyan);
+  display: block;
+  width: 0.6rem;
+  height: 100%;
+  border-radius: var(--item-border) 0 0 var(--item-border);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translate(3rem, -50%);
+}
+
+.logo {
+  width: 60%; /*w % czy rem, width czy max-width */
+}
+
+.text-box {
+}
+
+.info-box {
+  border-bottom: 1.5px solid var(--dark-grayish-cyan--light);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.company-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.company {
+  color: var(--desaturated-dark-cyan);
+  margin-right: 1.5rem;
+}
+
+.offer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 100rem;
+  padding: 0.5rem 0.9rem 0.4rem;
+}
+
+.tag--new {
+  background-color: var(--desaturated-dark-cyan);
+}
+
+.tag--featured {
+  background-color: var(--very-dark-grayish-cyan);
+}
+
+.position {
+  font-size: 1.55rem;
+  color: var(--very-dark-grayish-cyan);
+}
+
+.details {
+  font-size: 1.6rem;
+  color: var(--dark-grayish-cyan);
+  font-weight: 500;
+
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.added {
+}
+
+.dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: var(--dark-grayish-cyan--light);
+}
+
+.job-type {
+}
+
+.dot {
+}
+
+.place {
+}
+
+.tags-box {
+  padding-top: 1.5rem;
+
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-tag {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: var(--desaturated-dark-cyan);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: var(--light-grayish-cyan--tablets);
+}
+
+/********************************/
+/* GENERAL REUSABLE COMPONENTS */
+/********************************/
+
+/********************************/
+/* ATTRIBUTION */
+/********************************/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
