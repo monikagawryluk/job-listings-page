@@ -25,11 +25,49 @@
   </head>
   <body>
     <header class="header">
-      <img class="header-img" src="images/bg-header-mobile.svg" alt="" />
+      <!-- <img class="header-img" src="images/bg-header-mobile.svg" alt="" /> -->
     </header>
     <main class="main">
-      <div class="container">
-        <div class="job-item">
+      <div class="container container-filters-visible">
+        <div class="filters-item container-small">
+          <div class="filters">
+            <div class="filter">
+              <div class="filter-name" data-role="frontend">Frontend</div>
+              <button class="btn-remove">
+                <img
+                  class="icon-remove"
+                  src="images/icon-remove.svg"
+                  alt="icon close"
+                />
+              </button>
+            </div>
+            <div class="filter">
+              <div class="filter-name" data-languages="css">CSS</div>
+              <button class="btn-remove">
+                <img
+                  class="icon-remove"
+                  src="images/icon-remove.svg"
+                  alt="icon close"
+                />
+              </button>
+            </div>
+            <div class="filter">
+              <div class="filter-name" data-languages="javascript">
+                JavaScript
+              </div>
+              <button class="btn-remove">
+                <img
+                  class="icon-remove"
+                  src="images/icon-remove.svg"
+                  alt="icon close"
+                />
+              </button>
+            </div>
+          </div>
+          <button class="btn-clear">Clear</button>
+        </div>
+
+        <div class="job-item container-small">
           <div class="logo-box">
             <img class="logo" src="images/photosnap.svg" alt="Photosnap logo" />
           </div>
@@ -38,11 +76,11 @@
               <div class="company-box">
                 <div class="company">Photosnap</div>
                 <div class="offer-tags">
-                  <div class="tag tag--new">New!</div>
-                  <div class="tag tag--featured">Featured</div>
+                  <div class="feature-tag feature-tag--new">New!</div>
+                  <div class="feature-tag feature-tag--featured">Featured</div>
                 </div>
               </div>
-              <h2 class="position">Senior Frontend Developer</h2>
+              <button class="position">Senior Frontend Developer</button>
               <div class="details">
                 <div class="added">1d ago</div>
                 <div class="dot"></div>
@@ -64,7 +102,7 @@
           </div>
         </div>
 
-        <div class="job-item">
+        <div class="job-item container-small">
           <div class="logo-box">
             <img class="logo" src="images/photosnap.svg" alt="Photosnap logo" />
           </div>
@@ -79,11 +117,11 @@
               </div>
               <h2 class="position">Senior Frontend Developer</h2>
               <div class="details">
-                <div class="added">1d ago</div>
+                <div>1d ago</div>
                 <div class="dot"></div>
-                <div class="job-type">Full Time</div>
+                <div>Full Time</div>
                 <div class="dot"></div>
-                <div class="place">USA only</div>
+                <div>USA only</div>
               </div>
             </div>
             <div class="tags-box">
@@ -101,126 +139,7 @@
       </div>
     </main>
 
-    <div class="container">
-      <!-- Item Start -->
-      Photosnap New! Featured Senior Frontend Developer 1d ago Full Time USA
-      only
-      <!-- Role -->
-      Frontend
-      <!-- Level -->
-      Senior
-      <!-- Languages -->
-      HTML CSS JavaScript
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      Manage New! Featured Fullstack Developer 1d ago Part Time Remote
-      <!-- Role -->
-      Fullstack
-      <!-- Level -->
-      Midweight
-      <!-- Languages -->
-      Python
-      <!-- Tools -->
-      React
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      Account New! Junior Frontend Developer 2d ago Part Time USA only
-      <!-- Role -->
-      Frontend
-      <!-- Level -->
-      Junior
-      <!-- Languages -->
-      JavaScript
-      <!-- Tools -->
-      React Sass
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      MyHome Junior Frontend Developer 5d ago Contract USA only
-      <!-- Role -->
-      Frontend
-      <!-- Level -->
-      Junior
-      <!-- Languages -->
-      CSS JavaScript
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      Loop Studios Software Engineer 1w ago Full Time Worldwide
-      <!-- Role -->
-      Fullstack
-      <!-- Level -->
-      Midweight
-      <!-- Languages -->
-      JavaScript Ruby
-      <!-- Tools -->
-      Sass
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      FaceIt Junior Backend Developer 2w ago Full Time UK only
-      <!-- Role -->
-      Backend
-      <!-- Level -->
-      Junior
-      <!-- Languages -->
-      Ruby
-      <!-- Tools -->
-      RoR
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      Shortly Junior Developer 2w ago Full Time Worldwide
-      <!-- Role -->
-      Frontend
-      <!-- Level -->
-      Junior
-      <!-- Languages -->
-      HTML JavaScript
-      <!-- Tools -->
-      Sass
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      Insure Junior Frontend Developer 2w ago Full Time USA only
-      <!-- Role -->
-      Frontend
-      <!-- Level -->
-      Junior
-      <!-- Languages -->
-      JavaScript
-      <!-- Tools -->
-      Vue Sass
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      Eyecam Co. Full Stack Engineer 3w ago Full Time Worldwide
-      <!-- Role -->
-      Fullstack
-      <!-- Level -->
-      Midweight
-      <!-- Languages -->
-      JavaScript Python
-      <!-- Tools -->
-      Django
-      <!-- Item End -->
-
-      <!-- Item Start -->
-      The Air Filter Company Front-end Dev 1mo ago Part Time Worldwide
-      <!-- Role -->
-      Frontend
-      <!-- Level -->
-      Junior
-      <!-- Languages -->
-      JavaScript
-      <!-- Tools -->
-      React Sass
-      <!-- Item End -->
-    </div>
-
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a
         href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G"
@@ -230,6 +149,6 @@
       <a href="https://github.com/monikagawryluk" target="_blank"
         >Monika Gawryluk</a
       >.
-    </div>
+    </div> -->
   </body>
 </html>
