@@ -1,14 +1,13 @@
 :root {
   --desaturated-dark-cyan: hsl(180, 29%, 50%);
-  --light-grayish-cyan--backgroung: hsl(180, 52%, 96%);
+  --light-grayish-cyan--background: hsl(180, 52%, 96%);
   --light-grayish-cyan--tablets: hsl(180, 31%, 95%);
   --white: hsl(0, 0%, 100%);
   --dark-grayish-cyan: hsl(180, 8%, 52%);
   --dark-grayish-cyan--light: hsla(180, 8%, 52%, 0.4);
   --very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
-  --container-border-radius: 0.8rem;
-  /* --btn-tag-border-radius: 0.4rem:  */
+  --container-border-radius: 0.5rem;
 }
 
 * {
@@ -27,58 +26,61 @@ body {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.5px;
-  /* max-width: 144rem; */
+  background: linear-gradient(
+    to bottom,
+    var(--desaturated-dark-cyan) 0%,
+    var(--desaturated-dark-cyan) 15.6rem,
+    var(--light-grayish-cyan--background) 15.6rem,
+    var(--light-grayish-cyan--background) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 15.6rem;
-  background-color: var(--desaturated-dark-cyan);
   background-image: url(images/bg-header-mobile.svg);
   background-size: 100% 100%;
 }
 
 .main {
-  background-color: var(--light-grayish-cyan--backgroung);
   margin: 0 auto;
 }
 
+.main-filters-visible {
+  margin-top: -9.55rem;
+}
+
 .container {
-  padding: 6rem 0;
-  margin: 0 2.5rem;
-  position: relative;
+  padding: 6rem 2.5rem;
 
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
-.container-filters-visible {
-  padding-top: 13.5rem;
-}
-
-.container-small {
+.item-container {
   max-width: 43rem;
   width: 100%;
   margin: 0 auto;
   background-color: var(--white);
   border-radius: var(--container-border-radius);
-  padding: 0 2.3rem;
 }
 
 .filters-item {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -3.8rem);
+  padding: 2rem;
+  margin-bottom: 1.4rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* to samo co w tags-box, czy nie zrobi© jednej klasy */
+.hidden {
+  display: none;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -94,8 +96,8 @@ body {
   color: var(--desaturated-dark-cyan);
   background-color: var(--light-grayish-cyan--tablets);
   padding: 0.9rem 0.9rem 0.65rem;
-  border-bottom-left-radius: 0.4rem;
-  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
 }
 
 .btn-remove {
@@ -103,8 +105,8 @@ body {
   padding: 0 0.85rem;
   background-color: var(--desaturated-dark-cyan);
   border: none;
-  border-bottom-right-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
   cursor: pointer;
   transition: background-color 0.3s ease-in;
 
@@ -124,7 +126,7 @@ body {
   color: var(--dark-grayish-cyan);
   border: none;
   background-color: inherit;
-  margin-left: 1.5rem;
+  margin: 0 0.5rem 0 1.5rem;
   cursor: pointer;
   box-shadow: none;
   transition-property: color, box-shadow;
@@ -138,17 +140,22 @@ body {
 }
 
 .job-item {
-  padding-top: 3.2rem;
-  padding-bottom: 2.5rem;
+  padding: 3.2rem 2.3rem 2.5rem;
   position: relative;
 }
 
 .job-item::before {
   content: '';
-  background-color: var(--desaturated-dark-cyan);
   display: block;
-  width: 0.5rem;
   height: 100%;
+  width: 1.5rem;
+  background: linear-gradient(
+    to right,
+    var(--desaturated-dark-cyan) 0%,
+    var(--desaturated-dark-cyan) 0.5rem,
+    var(--white) 0.5rem,
+    var(--white) 100%
+  );
   border-top-left-radius: var(--container-border-radius);
   border-bottom-left-radius: var(--container-border-radius);
   position: absolute;
@@ -160,12 +167,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   transform: translate(2.5rem, -50%);
 }
 
 .logo {
   width: 4.7rem;
+  height: 4.7rem;
 }
 
 .info-box {
@@ -187,7 +194,7 @@ body {
   margin-right: 1rem;
 }
 
-.offer-tags {
+.features-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -216,6 +223,7 @@ body {
   font-weight: inherit;
   letter-spacing: inherit;
   background-color: inherit;
+  text-align: start;
   color: var(--very-dark-grayish-cyan);
   margin-bottom: 1.8rem;
   border: none;
@@ -241,6 +249,7 @@ body {
   height: 0.4rem;
   border-radius: 50%;
   background-color: var(--dark-grayish-cyan--light);
+  margin-bottom: 0.3rem;
 }
 
 .tags-box {
@@ -257,7 +266,7 @@ body {
   color: var(--desaturated-dark-cyan);
   padding: 0.9rem 0.9rem 0.8rem;
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   background-color: var(--light-grayish-cyan--tablets);
   cursor: pointer;
   transition-property: color, background-color;
@@ -278,10 +287,10 @@ body {
 /* ATTRIBUTION */
 /********************************/
 
-.attribution {
+/* .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
+} */

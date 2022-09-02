@@ -49,7 +49,7 @@ const generateJobMarkup = function (job) {
     .join('\n');
 
   return `
-    <div class="job-item container-small">
+    <div class="job-item item-container">
       <div class="logo-box">
         <img class="logo" src="${job.logo}" alt="${job.company} logo" />
       </div>
@@ -59,7 +59,7 @@ const generateJobMarkup = function (job) {
             <div class="company">${job.company}</div>
             ${
               job.new || job.featured
-                ? `<div class="offer-tags">
+                ? `<div class="features-tags">
             ${
               job.new
                 ? '<div class="feature-tag feature-tag--new">New!</div>'
@@ -123,8 +123,6 @@ const init = async function () {
     // Add jobs data to state
     createDataArray(data);
 
-    //  Czy wrzucić tu funkcję do wyczyszczenia containera
-
     // Render jobs items
     renderJobItems();
   } catch (err) {
@@ -135,10 +133,3 @@ const init = async function () {
 init();
 
 //// Event Listeners
-
-jobsContainer.addEventListener('click', function (e) {
-  if (!e.target.classList.contains('btn-tag')) return;
-
-  const tag = e.target;
-  // const tagType = tag.dataset.
-});
