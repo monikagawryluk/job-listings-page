@@ -116,7 +116,7 @@ const generateJobItemHTML = function (job) {
             <li class="details-item">${job.postedAt}</li>
             <li class="details-item">${job.contract}</li>
             <li class="details-item">${job.location}</li>
-          </div>
+          </ul>
         </div>
         <div class="offer-tags-box">
           ${generateOfferTagsHTML(job)}
@@ -145,8 +145,7 @@ const clearContainer = function (container) {
 
 const renderErrorMessage = function () {
   const errorHTML = `
-      <p class="error">Sorry, something went wrong. Jobs data couldn't be loaded.</p>
-      <p class="error">Please try again.</p>
+      <p class="error">Sorry, something went wrong. Jobs data couldn't be loaded. Please try again.</p>
     `;
   jobsContainerEl.insertAdjacentHTML('beforeend', errorHTML);
 };
